@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>for in: 反復処理の確認:for in </title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+    <h1>for in: 反復処理の確認:for in </h1>
+    <p id="view">ここにループ処理の結果が表示されます。</p>
+
+    <script>
+        //-------------------------------------------------
+        //ここから下に記述
+
+        //1.オブジェクト
+        const obj = {
+            a: 1,
+            b: 2,
+            c: 3,
+            d: 4
+        };
+
+        //2.繰返し処理で、文字列とオブジェクトを組み合わせ作成
+        for (let a in obj) {
+            //3.変数「str」に入ってる文字列を pタグid="view"に表示
+            $("body").append(obj[a] + "<br>");
+        }
+
+
+        //ここから上に記述
+        //-------------------------------------------------
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map（座標と地図のみ）</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--以下divをGoogleMap化-->
+    <div id="map"></div>
+
+    <!-- JS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=*******KEY*********&callback=initMap" async defer></script>
+    <script>
+        /** JS：記述スペース */
+        let map;
+        //緯度経度
+        const lat = 35.697239; //緯度を代入する変数
+        const lon = 139.774719; //経度を代入する変数
+        const zoom = 15; //zoom値１〜２０
+
+        function initMap() {
+            //div#mapを「GoogleMap」化
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: lat,
+                    lng: lon
+                }, //緯度,経度を設定
+                zoom: zoom //Zoom値設定
+            });
+        }
+    </script>
+</body>
+
+</html>
